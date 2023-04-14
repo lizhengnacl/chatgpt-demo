@@ -4,14 +4,15 @@
   "packageManager": "pnpm@7.28.0",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "build:vercel": "OUTPUT=vercel astro build",
     "build:netlify": "OUTPUT=netlify astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.astro",
-    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --fix"
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --fix",
+    "start": "pm2 start ecosystem.config.js",
+    "stop": "pm2 stop ecosystem.config.js"
   },
   "dependencies": {
     "@astrojs/netlify": "2.0.0",
