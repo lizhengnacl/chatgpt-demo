@@ -69,8 +69,12 @@ export default defineConfig({
       }),
     ],
   },
+  build: {
+    // bug fix https://github.com/withastro/astro/pull/6862
+    assetsPrefix: 'https://simple-talk-ai-1304696512.cos.ap-hongkong.myqcloud.com/',
+  },
   server: {
     host: true,
     port: 443,
-  }
+  },
 })
