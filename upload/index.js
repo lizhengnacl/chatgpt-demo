@@ -2,8 +2,8 @@ const path = require('path')
 const fs = require('fs')
 const COS = require('cos-nodejs-sdk-v5')
 const cos = new COS({
-  SecretId: 'AKIDMZYmwwlNo26zgAmOo472kGZeXDgx53qd',
-  SecretKey: 'jLm384qQoyuiLl02tXyCE6nKepoa8TbY',
+  // SecretId: 'AKIDMZYmwwlNo26zgAmOo472kGZeXDgx53qd',
+  // SecretKey: 'jLm384qQoyuiLl02tXyCE6nKepoa8TbY',
 })
 
 const config = {
