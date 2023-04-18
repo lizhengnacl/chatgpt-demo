@@ -1,9 +1,11 @@
 const path = require('path')
 const fs = require('fs')
 const COS = require('cos-nodejs-sdk-v5')
+require('dotenv').config();
+
 const cos = new COS({
-  // SecretId: 'AKIDMZYmwwlNo26zgAmOo472kGZeXDgx53qd',
-  // SecretKey: 'jLm384qQoyuiLl02tXyCE6nKepoa8TbY',
+  SecretId: process.env.COS_SECRET_ID,
+  SecretKey: process.env.COS_SECRET_KEY,
 })
 
 const config = {
