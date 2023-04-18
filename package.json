@@ -14,7 +14,8 @@
     "start": "pm2 start ecosystem.config.js",
     "stop": "pm2 stop ecosystem.config.js",
     "logs": "pm2 logs",
-    "upload": "node upload/index.js"
+    "upload": "node upload/index.js",
+    "reload": "npm run build && npm run upload && npm run stop && npm start"
   },
   "dependencies": {
     "@astrojs/netlify": "2.0.0",
@@ -22,7 +23,7 @@
     "@astrojs/solid-js": "^2.0.2",
     "@astrojs/vercel": "^3.1.3",
     "@unocss/reset": "^0.50.1",
-    "astro": "^2.0.15",
+    "astro": "^2.3.0",
     "eslint": "^8.36.0",
     "eventsource-parser": "^0.1.0",
     "highlight.js": "^11.7.0",
