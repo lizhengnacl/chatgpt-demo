@@ -38,7 +38,7 @@ export default (props: Props) => {
         <Show when={!props.currentSystemRoleSettings() && props.canEdit()}>
           <span onClick={() => props.setSystemRoleEditing(!props.systemRoleEditing())} class="sys-edit-btn">
             <IconEnv />
-            <span>添加 AI 预设角色</span>
+            <span>设置 AI 扮演的角色</span>
           </span>
         </Show>
       </Show>
