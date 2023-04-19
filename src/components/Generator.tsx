@@ -230,8 +230,8 @@ export default () => {
         when={!loading()}
         fallback={() => (
           <div class="gen-cb-wrapper">
-            <span>AI is thinking...</span>
-            <div class="gen-cb-stop" onClick={stopStreamFetch}>Stop</div>
+            <span>AI 正在思考...</span>
+            <div class="gen-cb-stop" onClick={stopStreamFetch}>停止</div>
           </div>
         )}
       >
@@ -240,7 +240,7 @@ export default () => {
             ref={inputRef!}
             disabled={systemRoleEditing()}
             onKeyDown={handleKeydown}
-            placeholder="Enter something..."
+            placeholder="输入些什么..."
             autocomplete="off"
             autofocus
             onInput={() => {
@@ -251,7 +251,7 @@ export default () => {
             class="gen-textarea"
           />
           <button onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
-            Send
+            Enter
           </button>
           <button title="Clear" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn>
             <IconClear />

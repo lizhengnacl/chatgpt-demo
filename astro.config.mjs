@@ -8,6 +8,8 @@ import vercel from '@astrojs/vercel/edge'
 import netlify from '@astrojs/netlify/edge-functions'
 import disableBlocks from './plugins/disableBlocks'
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 const envAdapter = () => {
   if (process.env.OUTPUT === 'vercel') {
     return vercel()
@@ -73,8 +75,8 @@ export default defineConfig({
     // bug fix https://github.com/withastro/astro/pull/6862
     assetsPrefix: 'https://cdn.simpletalkai.com',
   },
-  server: {
+  server: isProduction ? {
     host: true,
     port: 443,
-  },
+  } : undefined,
 })
