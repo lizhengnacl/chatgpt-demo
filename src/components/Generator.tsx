@@ -241,7 +241,7 @@ export default () => {
             ref={inputRef!}
             disabled={systemRoleEditing()}
             onKeyDown={handleKeydown}
-            placeholder="如何简洁清晰的表达自己的观点？"
+            placeholder="如何清晰的表达？"
             autocomplete="off"
             autofocus
             onInput={() => {
