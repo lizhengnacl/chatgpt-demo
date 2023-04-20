@@ -60,7 +60,7 @@ export default (props: Props) => {
             />
           </div>
           <button onClick={handleButtonClick} gen-slate-btn>
-            Set
+            设置
           </button>
         </div>
       </Show>
