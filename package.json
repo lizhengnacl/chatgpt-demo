@@ -15,7 +15,7 @@
     "stop": "pm2 stop ecosystem.config.js",
     "logs": "pm2 logs",
     "upload": "node upload/index.js",
-    "reload": "npm run build && npm run upload && npm run stop && npm start"
+    "update": "git pull origin main && npm run build && npm run upload && npm run stop && npm start"
   },
   "dependencies": {
     "@astrojs/netlify": "2.0.0",
