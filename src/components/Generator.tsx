@@ -55,8 +55,27 @@ export default () => {
     isStick() ? localStorage.setItem('stickToBottom', 'stick') : localStorage.removeItem('stickToBottom')
   }
 
-  const handleButtonClick = async() => {
+  const check = () => {
+    const KEY = '_TOKEN_';
+    const VALUE = 'C5HiIb6dckK7_1x';
+    const value = localStorage.getItem(KEY);
+    if (value === VALUE) {
+      return true;
+    } else if (inputRef.value === VALUE) {
+      localStorage.setItem(KEY, VALUE);
+      inputRef.value = ''
+      return false;
+    }
+  }
+
+  const handleButtonClick = async () => {
     const inputValue = inputRef.value
+
+    // 添加简易的校验
+    const pass = check();
+    if (!pass)
+      return
+
     if (!inputValue)
       return
 
@@ -83,7 +102,7 @@ export default () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'instant' })
   }
 
-  const requestWithLatestMessage = async() => {
+  const requestWithLatestMessage = async () => {
     setLoading(true)
     setCurrentAssistantMessage('')
     setCurrentError(null)
@@ -226,7 +245,7 @@ export default () => {
           message={currentAssistantMessage}
         />
       )}
-      { currentError() && <ErrorMessageItem data={currentError()} onRetry={retryLastFetch} /> }
+      {currentError() && <ErrorMessageItem data={currentError()} onRetry={retryLastFetch} />}
       <Show
         when={!loading()}
         fallback={() => (
