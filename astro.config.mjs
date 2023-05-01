@@ -71,10 +71,10 @@ export default defineConfig({
       }),
     ],
   },
-  build: {
-    // bug fix https://github.com/withastro/astro/pull/6862
-    assetsPrefix: 'https://cdn.simpletalkai.com',
-  },
+  // build: {
+  //   // bug fix https://github.com/withastro/astro/pull/6862
+  //   assetsPrefix: 'https://cdn.simpletalkai.com',
+  // },
   server: isProduction ? {
     host: true,
     port: 443,
