@@ -72,9 +72,9 @@ export default () => {
     const inputValue = inputRef.value
 
     // 添加简易的校验
-    const pass = check();
-    if (!pass)
-      return
+    // const pass = check();
+    // if (!pass)
+    //   return
 
     if (!inputValue)
       return
