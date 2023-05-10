@@ -77,6 +77,7 @@ export default defineConfig({
   // },
   server: isProduction ? {
     host: true,
-    port: 443,
+    // port: 443,
+    port: 8080,
   } : undefined,
 })
